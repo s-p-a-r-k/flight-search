@@ -1,5 +1,11 @@
 # ODS Full Stack Coding Assignment
 
+## Prerequisites
+
+Install NodeJS - https://nodejs.org/en/download/
+
+Install AngularCLI - ```npm install -g @angular/cli```
+
 ## How to run
 
 Run the following command from this project's home directory:
@@ -8,7 +14,13 @@ Run the following command from this project's home directory:
 ng serve --open
 ```
 
-Your browser will navigate to `http://localhost:4200/`.
+Your browser will navigate to http://localhost:4200/.
+
+If it is giving errors, you may need to run the following commands as well:
+```
+npm install --save ng2-smart-table
+ng add @angular/material
+```
 
 ## Assignment
 
