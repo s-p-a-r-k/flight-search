@@ -1,0 +1,19 @@
+body {
+    padding: 20px;
+}
+
+.search-full-width {
+    width: 40%;
+}
+
+.placeholder {
+    color: #E91E63;
+}
+
+.mat-form-field-appearance-legacy .mat-form-field-underline {
+    background-color: #E91E63 !important;
+}
+
+.mat-form-field-ripple {
+    background-color: #E91E63 !important;
+}

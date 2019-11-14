@@ -1,8 +1,18 @@
 # ODS Full Stack Coding Assignment
 
+## How to run
+
+Run the following command from this project's home directory:
+
+```
+ng serve --open
+```
+
+Your browser will navigate to `http://localhost:4200/`.
+
 ## Assignment
 
-Create a web application that allows a user to search for flights and display the results in a tabular view.
+This is a web application that allows a user to search for flights and display the results in a tabular view.
 
 ## Features
 
@@ -14,16 +24,8 @@ Create a web application that allows a user to search for flights and display th
 
 ## Datasource
 
-A zipped CSV file of flights is available in /data/flights.csv. Each row in the CSV file represents a flight.
+A zipped CSV file of flights has been moved from /data/flights.csv to /src/assets/data/flights.csv. Each row in the CSV file represents a flight.
 
 ## Implementation
 
-Use any technologies you want. If you are familiar with Python and/or Angular please use these for your app. You can use any additional technologies/frameworks/dbs/libraries you would like to.
-
-To submit your solution, clone this repo and push to a personal github repo and submit the link.
-
-Please update the README
-
-Return your solution within 1 week - this is to provide a buffer for busy schedules.
-
-Please ask any questions you have.
+Used Angular.

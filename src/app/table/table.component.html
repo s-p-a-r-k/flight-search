@@ -1,0 +1,60 @@
+<body>
+  <h1 id="tableLabel">Flight Search</h1>
+
+  <form class="search-form" [formGroup]='usersForm'>
+      <mat-form-field class="search-full-width">
+        <input matInput [matAutocomplete]="auto" formControlName='userInput'>
+        <mat-placeholder class="placeholder">Search for an origin or a destination</mat-placeholder>
+      </mat-form-field>
+    
+      <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+          <mat-option *ngFor="let flight of filteredStations | async" [value]="flight">
+            <span>{{ flight.station }}</span>
+            <small> | {{flight.fullName}}</small>
+          </mat-option>
+      </mat-autocomplete>
+
+      <ng2-smart-table
+          [settings]="settings"
+          [source]="getInfo(usersForm.get('userInput').value)">
+      </ng2-smart-table>
+
+      <!-- <table class='table table-striped' aria-labelledby="tableLabel" *ngIf="isValid(usersForm.get('userInput').value)">
+        <thead>
+          <tr>
+            <th>Origin</th>
+            <th>Destination</th>
+            <th>Scheduled Origin Gate</th>
+            <th>Scheduled Destination Gate</th>
+            <th>id</th>
+            <th>created at</th>
+            <th>updated at</th>
+            <th>flight identifier</th>
+            <th>flight number</th>
+            <th>out gmt</th>
+            <th>in gmt</th>
+            <th>off gmt</th>
+            <th>on gmt</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let flight of getInfo(usersForm.get('userInput').value)">
+            <td>{{ flight.origin_full_name }} ({{ flight.origin }})</td>
+            <td>{{ flight.destination_full_name }} ({{ flight.destination }})</td>
+            <td>{{ flight.scheduled_origin_gate }}</td>
+            <td>{{ flight.scheduled_destination_gate }}</td>
+            <td>{{ flight.id }}</td>
+            <td>{{ flight.created_at }}</td>
+            <td>{{ flight.updated_at }}</td>
+            <td>{{ flight.flight_identifier }}</td>
+            <td>{{ flight.flt_num }}</td>
+            <td>{{ flight.out_gmt }}</td>
+            <td>{{ flight.in_gmt }}</td>
+            <td>{{ flight.off_gmt }}</td>
+            <td>{{ flight.on_gmt }}</td>
+          </tr>
+        </tbody>
+      </table> -->
+
+  </form>
+</body>
