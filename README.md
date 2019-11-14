@@ -28,7 +28,7 @@ This is a web application that allows a user to search for flights and display t
 
 ## Features
 
-1. Allow the user to enter a station (destination or origin) to search flights. Display the results in a table.
+1. Allow the user to enter a station's (destination or origin) full name or IATA airport code to search flights. Display the results in a table.
 
 2. Provide an auto-suggest feature for station.
 
